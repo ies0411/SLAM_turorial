@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/eunsoo/Downloads/study_알짜/slambook/practice2/testSophus.cpp
+cmath
+-
+eigen3/Eigen/Core
+-
+eigen3/Eigen/Geometry
+-
+iostream
+-
+sophus/se3.hpp
+-
+sophus/so3.hpp
+-
+

@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/eunsoo/Downloads/study_알짜/slambook/practice2/testEigen.cpp
+ctime
+-
+eigen3/Eigen/Core
+-
+eigen3/Eigen/Dense
+-
+eigen3/Eigen/Eigenvalues
+-
+eigen3/Eigen/Geometry
+-
+iostream
+-
+
