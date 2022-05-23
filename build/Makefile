@@ -163,6 +163,19 @@ ceresTutorial/fast:
 .PHONY : ceresTutorial/fast
 
 #=============================================================================
+# Target rules for targets named testg2o
+
+# Build rule for target.
+testg2o: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 testg2o
+.PHONY : testg2o
+
+# fast build rule for target.
+testg2o/fast:
+	$(MAKE) -f CMakeFiles/testg2o.dir/build.make CMakeFiles/testg2o.dir/build
+.PHONY : testg2o/fast
+
+#=============================================================================
 # Target rules for targets named testSophus
 
 # Build rule for target.
@@ -323,6 +336,33 @@ testceres.cpp.s:
 	$(MAKE) -f CMakeFiles/testceres.dir/build.make CMakeFiles/testceres.dir/testceres.cpp.s
 .PHONY : testceres.cpp.s
 
+testg2o.o: testg2o.cpp.o
+
+.PHONY : testg2o.o
+
+# target to build an object file
+testg2o.cpp.o:
+	$(MAKE) -f CMakeFiles/testg2o.dir/build.make CMakeFiles/testg2o.dir/testg2o.cpp.o
+.PHONY : testg2o.cpp.o
+
+testg2o.i: testg2o.cpp.i
+
+.PHONY : testg2o.i
+
+# target to preprocess a source file
+testg2o.cpp.i:
+	$(MAKE) -f CMakeFiles/testg2o.dir/build.make CMakeFiles/testg2o.dir/testg2o.cpp.i
+.PHONY : testg2o.cpp.i
+
+testg2o.s: testg2o.cpp.s
+
+.PHONY : testg2o.s
+
+# target to generate assembly for a file
+testg2o.cpp.s:
+	$(MAKE) -f CMakeFiles/testg2o.dir/build.make CMakeFiles/testg2o.dir/testg2o.cpp.s
+.PHONY : testg2o.cpp.s
+
 testimage.o: testimage.cpp.o
 
 .PHONY : testimage.o
@@ -362,6 +402,7 @@ help:
 	@echo "... featureTutorial"
 	@echo "... testimage"
 	@echo "... ceresTutorial"
+	@echo "... testg2o"
 	@echo "... testSophus"
 	@echo "... testEigen"
 	@echo "... ceresTutorial.o"
@@ -379,6 +420,9 @@ help:
 	@echo "... testceres.o"
 	@echo "... testceres.i"
 	@echo "... testceres.s"
+	@echo "... testg2o.o"
+	@echo "... testg2o.i"
+	@echo "... testg2o.s"
 	@echo "... testimage.o"
 	@echo "... testimage.i"
 	@echo "... testimage.s"

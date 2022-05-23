@@ -1,21 +1,21 @@
 Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
 Change Dir: /home/eunsoo/Downloads/study_알짜/slambook/practice2/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_29c17/fast && /usr/bin/make -f CMakeFiles/cmTC_29c17.dir/build.make CMakeFiles/cmTC_29c17.dir/build
+Run Build Command(s):/usr/bin/make cmTC_d1dc8/fast && /usr/bin/make -f CMakeFiles/cmTC_d1dc8.dir/build.make CMakeFiles/cmTC_d1dc8.dir/build
 make[1]: Entering directory '/home/eunsoo/Downloads/study_알짜/slambook/practice2/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_29c17.dir/src.c.o
-/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_29c17.dir/src.c.o   -c /home/eunsoo/Downloads/study_알짜/slambook/practice2/build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_29c17
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_29c17.dir/link.txt --verbose=1
-/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_29c17.dir/src.c.o  -o cmTC_29c17 
-/usr/bin/ld: CMakeFiles/cmTC_29c17.dir/src.c.o: in function `main':
+Building C object CMakeFiles/cmTC_d1dc8.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_d1dc8.dir/src.c.o   -c /home/eunsoo/Downloads/study_알짜/slambook/practice2/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_d1dc8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d1dc8.dir/link.txt --verbose=1
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD     CMakeFiles/cmTC_d1dc8.dir/src.c.o  -o cmTC_d1dc8 
+/usr/bin/ld: CMakeFiles/cmTC_d1dc8.dir/src.c.o: in function `main':
 src.c:(.text+0x46): undefined reference to `pthread_create'
 /usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
 /usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_29c17.dir/build.make:87: cmTC_29c17] Error 1
+make[1]: *** [CMakeFiles/cmTC_d1dc8.dir/build.make:87: cmTC_d1dc8] Error 1
 make[1]: Leaving directory '/home/eunsoo/Downloads/study_알짜/slambook/practice2/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_29c17/fast] Error 2
+make: *** [Makefile:121: cmTC_d1dc8/fast] Error 2
 
 
 Source file was:
@@ -41,56 +41,56 @@ int main(void)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /home/eunsoo/Downloads/study_알짜/slambook/practice2/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_e4099/fast && /usr/bin/make -f CMakeFiles/cmTC_e4099.dir/build.make CMakeFiles/cmTC_e4099.dir/build
+Run Build Command(s):/usr/bin/make cmTC_cd210/fast && /usr/bin/make -f CMakeFiles/cmTC_cd210.dir/build.make CMakeFiles/cmTC_cd210.dir/build
 make[1]: Entering directory '/home/eunsoo/Downloads/study_알짜/slambook/practice2/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_e4099.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_e4099.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
-Linking C executable cmTC_e4099
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e4099.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_e4099.dir/CheckFunctionExists.c.o  -o cmTC_e4099  -lpthreads 
+Building C object CMakeFiles/cmTC_cd210.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_cd210.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_cd210
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cd210.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create     CMakeFiles/cmTC_cd210.dir/CheckFunctionExists.c.o  -o cmTC_cd210  -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_e4099.dir/build.make:87: cmTC_e4099] Error 1
+make[1]: *** [CMakeFiles/cmTC_cd210.dir/build.make:87: cmTC_cd210] Error 1
 make[1]: Leaving directory '/home/eunsoo/Downloads/study_알짜/slambook/practice2/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_e4099/fast] Error 2
+make: *** [Makefile:121: cmTC_cd210/fast] Error 2
 
 
 
 Determining if the function sgemm_ exists failed with the following output:
 Change Dir: /home/eunsoo/Downloads/study_알짜/slambook/practice2/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_ef583/fast && /usr/bin/make -f CMakeFiles/cmTC_ef583.dir/build.make CMakeFiles/cmTC_ef583.dir/build
+Run Build Command(s):/usr/bin/make cmTC_06215/fast && /usr/bin/make -f CMakeFiles/cmTC_06215.dir/build.make CMakeFiles/cmTC_06215.dir/build
 make[1]: Entering directory '/home/eunsoo/Downloads/study_알짜/slambook/practice2/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_ef583.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=sgemm_   -o CMakeFiles/cmTC_ef583.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
-Linking C executable cmTC_ef583
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ef583.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=sgemm_    -rdynamic CMakeFiles/cmTC_ef583.dir/CheckFunctionExists.c.o  -o cmTC_ef583 
-/usr/bin/ld: CMakeFiles/cmTC_ef583.dir/CheckFunctionExists.c.o: in function `main':
+Building C object CMakeFiles/cmTC_06215.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=sgemm_   -o CMakeFiles/cmTC_06215.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_06215
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_06215.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=sgemm_     CMakeFiles/cmTC_06215.dir/CheckFunctionExists.c.o  -o cmTC_06215 
+/usr/bin/ld: CMakeFiles/cmTC_06215.dir/CheckFunctionExists.c.o: in function `main':
 CheckFunctionExists.c:(.text+0x14): undefined reference to `sgemm_'
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_ef583.dir/build.make:87: cmTC_ef583] Error 1
+make[1]: *** [CMakeFiles/cmTC_06215.dir/build.make:87: cmTC_06215] Error 1
 make[1]: Leaving directory '/home/eunsoo/Downloads/study_알짜/slambook/practice2/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_ef583/fast] Error 2
+make: *** [Makefile:121: cmTC_06215/fast] Error 2
 
 
 
 Determining if the function cheev_ exists failed with the following output:
 Change Dir: /home/eunsoo/Downloads/study_알짜/slambook/practice2/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_02129/fast && /usr/bin/make -f CMakeFiles/cmTC_02129.dir/build.make CMakeFiles/cmTC_02129.dir/build
+Run Build Command(s):/usr/bin/make cmTC_b9595/fast && /usr/bin/make -f CMakeFiles/cmTC_b9595.dir/build.make CMakeFiles/cmTC_b9595.dir/build
 make[1]: Entering directory '/home/eunsoo/Downloads/study_알짜/slambook/practice2/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_02129.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=cheev_   -o CMakeFiles/cmTC_02129.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
-Linking C executable cmTC_02129
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_02129.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=cheev_    -rdynamic CMakeFiles/cmTC_02129.dir/CheckFunctionExists.c.o  -o cmTC_02129  /usr/lib/x86_64-linux-gnu/libf77blas.so /usr/lib/x86_64-linux-gnu/libatlas.so 
-/usr/bin/ld: CMakeFiles/cmTC_02129.dir/CheckFunctionExists.c.o: in function `main':
+Building C object CMakeFiles/cmTC_b9595.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=cheev_   -o CMakeFiles/cmTC_b9595.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_b9595
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b9595.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=cheev_     CMakeFiles/cmTC_b9595.dir/CheckFunctionExists.c.o  -o cmTC_b9595  /usr/lib/x86_64-linux-gnu/libf77blas.so /usr/lib/x86_64-linux-gnu/libatlas.so 
+/usr/bin/ld: CMakeFiles/cmTC_b9595.dir/CheckFunctionExists.c.o: in function `main':
 CheckFunctionExists.c:(.text+0x14): undefined reference to `cheev_'
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_02129.dir/build.make:89: cmTC_02129] Error 1
+make[1]: *** [CMakeFiles/cmTC_b9595.dir/build.make:89: cmTC_b9595] Error 1
 make[1]: Leaving directory '/home/eunsoo/Downloads/study_알짜/slambook/practice2/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_02129/fast] Error 2
+make: *** [Makefile:121: cmTC_b9595/fast] Error 2
 
 
 

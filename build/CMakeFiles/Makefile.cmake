@@ -11,6 +11,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.16.3/CMakeCCompiler.cmake"
   "CMakeFiles/3.16.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.16.3/CMakeSystem.cmake"
+  "../cmake_modules/FindCSparse.cmake"
+  "../cmake_modules/FindG2O.cmake"
   "/usr/lib/cmake/eigen3/Eigen3Config.cmake"
   "/usr/lib/cmake/eigen3/Eigen3ConfigVersion.cmake"
   "/usr/lib/cmake/eigen3/Eigen3Targets.cmake"
@@ -160,6 +162,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/featureTutorial.dir/DependInfo.cmake"
   "CMakeFiles/testimage.dir/DependInfo.cmake"
   "CMakeFiles/ceresTutorial.dir/DependInfo.cmake"
+  "CMakeFiles/testg2o.dir/DependInfo.cmake"
   "CMakeFiles/testSophus.dir/DependInfo.cmake"
   "CMakeFiles/testEigen.dir/DependInfo.cmake"
   )

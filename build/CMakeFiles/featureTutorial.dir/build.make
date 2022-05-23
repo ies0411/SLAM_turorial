@@ -108,6 +108,7 @@ featureTutorial: /usr/lib/x86_64-linux-gnu/libvtkViewsContext2D-7.1.so.7.1p.1
 featureTutorial: /usr/lib/x86_64-linux-gnu/libvtkViewsCore-7.1.so.7.1p.1
 featureTutorial: /usr/lib/x86_64-linux-gnu/libvtkRenderingContextOpenGL2-7.1.so.7.1p.1
 featureTutorial: /usr/lib/x86_64-linux-gnu/libvtkRenderingOpenGL2-7.1.so.7.1p.1
+featureTutorial: /usr/lib/x86_64-linux-gnu/libcxsparse.so
 featureTutorial: /usr/local/lib/libopencv_calib3d.so.3.4.5
 featureTutorial: /usr/local/lib/libopencv_features2d.so.3.4.5
 featureTutorial: /usr/local/lib/libopencv_flann.so.3.4.5

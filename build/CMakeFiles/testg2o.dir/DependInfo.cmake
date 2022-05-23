@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/eunsoo/Downloads/study_알짜/slambook/practice2/testSophus.cpp" "/home/eunsoo/Downloads/study_알짜/slambook/practice2/build/CMakeFiles/testSophus.dir/testSophus.cpp.o"
+  "/home/eunsoo/Downloads/study_알짜/slambook/practice2/testg2o.cpp" "/home/eunsoo/Downloads/study_알짜/slambook/practice2/build/CMakeFiles/testg2o.dir/testg2o.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -15,7 +15,6 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
   "DISABLE_OPENNI2"
   "DISABLE_PCAP"
   "DISABLE_PNG"
-  "FMT_LOCALE"
   "vtkRenderingContext2D_AUTOINIT=1(vtkRenderingContextOpenGL2)"
   "vtkRenderingCore_AUTOINIT=3(vtkInteractionStyle,vtkRenderingFreeType,vtkRenderingOpenGL2)"
   )
@@ -26,8 +25,8 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/usr/include/freetype2"
   "/usr/include/pcl-1.10"
   "/usr/include/eigen3"
-  "/usr/local/include/opencv"
   "/usr/include/suitesparse"
+  "/usr/local/include/opencv"
   )
 
 # Targets to which this target links.

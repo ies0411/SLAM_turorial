@@ -26,6 +26,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/usr/include/pcl-1.10"
   "/usr/include/eigen3"
   "/usr/local/include/opencv"
+  "/usr/include/suitesparse"
   )
 
 # Targets to which this target links.

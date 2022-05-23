@@ -57,6 +57,7 @@ all: CMakeFiles/testceres.dir/all
 all: CMakeFiles/featureTutorial.dir/all
 all: CMakeFiles/testimage.dir/all
 all: CMakeFiles/ceresTutorial.dir/all
+all: CMakeFiles/testg2o.dir/all
 all: CMakeFiles/testSophus.dir/all
 all: CMakeFiles/testEigen.dir/all
 
@@ -72,6 +73,7 @@ clean: CMakeFiles/testceres.dir/clean
 clean: CMakeFiles/featureTutorial.dir/clean
 clean: CMakeFiles/testimage.dir/clean
 clean: CMakeFiles/ceresTutorial.dir/clean
+clean: CMakeFiles/testg2o.dir/clean
 clean: CMakeFiles/testSophus.dir/clean
 clean: CMakeFiles/testEigen.dir/clean
 
@@ -138,7 +140,7 @@ CMakeFiles/featureTutorial.dir/clean:
 CMakeFiles/testimage.dir/all:
 	$(MAKE) -f CMakeFiles/testimage.dir/build.make CMakeFiles/testimage.dir/depend
 	$(MAKE) -f CMakeFiles/testimage.dir/build.make CMakeFiles/testimage.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/eunsoo/Downloads/study_알짜/slambook/practice2/build/CMakeFiles --progress-num=11,12 "Built target testimage"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/eunsoo/Downloads/study_알짜/slambook/practice2/build/CMakeFiles --progress-num=13,14 "Built target testimage"
 .PHONY : CMakeFiles/testimage.dir/all
 
 # Build rule for subdir invocation for target.
@@ -184,6 +186,33 @@ ceresTutorial: CMakeFiles/ceresTutorial.dir/rule
 CMakeFiles/ceresTutorial.dir/clean:
 	$(MAKE) -f CMakeFiles/ceresTutorial.dir/build.make CMakeFiles/ceresTutorial.dir/clean
 .PHONY : CMakeFiles/ceresTutorial.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/testg2o.dir
+
+# All Build rule for target.
+CMakeFiles/testg2o.dir/all:
+	$(MAKE) -f CMakeFiles/testg2o.dir/build.make CMakeFiles/testg2o.dir/depend
+	$(MAKE) -f CMakeFiles/testg2o.dir/build.make CMakeFiles/testg2o.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/eunsoo/Downloads/study_알짜/slambook/practice2/build/CMakeFiles --progress-num=11,12 "Built target testg2o"
+.PHONY : CMakeFiles/testg2o.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/testg2o.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eunsoo/Downloads/study_알짜/slambook/practice2/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/testg2o.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eunsoo/Downloads/study_알짜/slambook/practice2/build/CMakeFiles 0
+.PHONY : CMakeFiles/testg2o.dir/rule
+
+# Convenience name for target.
+testg2o: CMakeFiles/testg2o.dir/rule
+
+.PHONY : testg2o
+
+# clean rule for target.
+CMakeFiles/testg2o.dir/clean:
+	$(MAKE) -f CMakeFiles/testg2o.dir/build.make CMakeFiles/testg2o.dir/clean
+.PHONY : CMakeFiles/testg2o.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/testSophus.dir

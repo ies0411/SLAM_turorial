@@ -25,6 +25,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/usr/include/vtk-7.1"
   "/usr/include/freetype2"
   "/usr/include/pcl-1.10"
+  "/usr/include/suitesparse"
   "/usr/include/eigen3"
   "/usr/local/include/opencv"
   )

@@ -1,1 +1,1 @@
-/usr/bin/c++  -std=c++17  -O3 -DNDEBUG    -rdynamic CMakeFiles/testSophus.dir/testSophus.cpp.o  -o testSophus  /usr/lib/x86_64-linux-gnu/libfmt.a 
+/usr/bin/c++  -std=c++17  -O3 -DNDEBUG    CMakeFiles/testSophus.dir/testSophus.cpp.o  -o testSophus  /usr/lib/x86_64-linux-gnu/libfmt.a 

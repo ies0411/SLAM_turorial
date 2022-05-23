@@ -1,10 +1,10 @@
-// #include <g2o/core/base_unary_edge.h>
-// // #include <g2o/core/base_binary_edge.h>
-// #include <g2o/core/base_vertex.h>
-// #include <g2o/core/block_solver.h>
-// #include <g2o/core/optimization_algorithm_levenberg.h>
-// #include <g2o/solvers/csparse/linear_solver_csparse.h>
-// #include <g2o/types/sba/types_six_dof_expmap.h>
+#include <g2o/core/base_unary_edge.h>
+// #include <g2o/core/base_binary_edge.h>
+#include <g2o/core/base_vertex.h>
+#include <g2o/core/block_solver.h>
+#include <g2o/core/optimization_algorithm_levenberg.h>
+#include <g2o/solvers/csparse/linear_solver_csparse.h>
+#include <g2o/types/sba/types_six_dof_expmap.h>
 
 #include <Eigen/Core>
 #include <Eigen/Geometry>
@@ -119,6 +119,68 @@ void triangulation(const std::vector<cv::KeyPoint>& keypoint_1, const std::vecto
     }
 }
 
+void budleAdjustment(const std::vector<cv::Point3f> points_3d, const std::vector<cv::Point2f> points_2d,
+                     const cv::Mat& K, cv::Mat& R, cv::Mat& t) {
+    // initialize g2o
+    // pose dimension is 6, The landmark dimension is 3
+    typedef g2o::BlockSolver<g2o::BlockSolverTraits<6, 3>> Block;
+    // linear equation solver
+    std::unique_ptr<Block::LinearSolverType> linearSolver(new g2o::LinearSolverCSparse<Block::PoseMatrixType>());  // linear equation solver
+    std::unique_ptr<Block> solver_ptr(new Block(std::move(linearSolver)));
+    g2o::OptimizationAlgorithmLevenberg* solver = new g2o::OptimizationAlgorithmLevenberg(std::move(solver_ptr));
+    g2o::SparseOptimizer optimizer;
+    optimizer.setAlgorithm(solver);
+
+    // vertex
+    g2o::VertexSE3Expmap* pose = new g2o::VertexSE3Expmap();
+    Eigen::Matrix3d R_mat;
+    R_mat << R.at<double>(0, 0), R.at<double>(0, 1), R.at<double>(0, 2),
+        R.at<double>(1, 0), R.at<double>(1, 1), R.at<double>(1, 2),
+        R.at<double>(2, 0), R.at<double>(2, 1), R.at<double>(2, 2);
+
+    pose->setId(0);
+    pose->setEstimate(g2o::SE3Quat(R_mat, Eigen::Vector3d(t.at<double>(0, 0), t.at<double>(1, 0), t.at<double>(2.0))));
+    optimizer.addVertex(pose);
+    // vertex
+    int index = 1;
+    // landmarks
+    for (auto& p : points_3d) {
+        g2o::VertexPointXYZ* point = new g2o::VertexPointXYZ();
+        point->setId(index++);
+        point->setEstimate(Eigen::Vector3d(p.x, p.y, p.z));
+        point->setMarginalized(true);  // Marg must be set in g2o. See the content of Lecture 10
+        optimizer.addVertex(point);
+    }
+    // camera intrinsics
+    g2o::CameraParameters* camera = new g2o::CameraParameters(
+        K.at<double>(0, 0), Eigen::Vector2d(K.at<double>(0, 2), K.at<double>(1, 2)), 0);
+    camera->setId(0);
+    optimizer.addParameter(camera);
+
+    // edge
+    index = 1;
+    for (auto p : points_2d) {
+        g2o::EdgeProjectXYZ2UV* edge = new g2o::EdgeProjectXYZ2UV();
+        edge->setId(index);
+        edge->setVertex(0, dynamic_cast<g2o::VertexPointXYZ*>(optimizer.vertex(index)));
+        edge->setVertex(1, pose);
+        edge->setMeasurement(Eigen::Vector2d(p.x, p.y));
+        edge->setParameterId(0, 0);
+        edge->setInformation(Eigen::Matrix2d::Identity());
+        optimizer.addEdge(edge);
+        index++;
+    }
+
+    std::chrono::steady_clock::time_point t1 = std::chrono::steady_clock::now();
+    optimizer.setVerbose(true);
+    optimizer.initializeOptimization();
+    optimizer.optimize(100);
+    std::chrono::steady_clock::time_point t2 = std::chrono::steady_clock::now();
+    std::chrono::duration<double> time_used = std::chrono::duration_cast<std::chrono::duration<double>>(t2 - t1);
+    std::cout << "cost time :" << time_used.count() << std::endl;
+    std::cout << "T=" << std::endl
+              << Eigen::Isometry3d(pose->estimate()).matrix() << std::endl;
+}
 int main(int argc, char const* argv[]) {
     std::string img1_path = "../data/1.png";
     std::string img2_path = "../data/2.png";
@@ -176,5 +238,7 @@ int main(int argc, char const* argv[]) {
     std::cout << "t=" << std::endl
               << t << std::endl;
     std::cout << "====BA====" << std::endl;
+    budleAdjustment(pts_3d, pts_2d, K, R, t);
+
     return 0;
 }
