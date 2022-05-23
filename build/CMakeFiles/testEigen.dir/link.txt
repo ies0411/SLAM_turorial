@@ -1,1 +1,1 @@
-/usr/bin/c++  -std=c++17 -O3 -DNDEBUG  -rdynamic CMakeFiles/testEigen.dir/testEigen.cpp.o  -o testEigen 
+/usr/bin/c++  -std=c++17  -O3 -DNDEBUG    -rdynamic CMakeFiles/testEigen.dir/testEigen.cpp.o  -o testEigen 

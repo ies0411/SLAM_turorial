@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/eunsoo/Downloads/study_알짜/slambook/practice2/testceres.cpp
+ceres/ceres.h
+-
+chrono
+-
+iostream
+-
+opencv2/core/core.hpp
+-
+glog/logging.h
+/home/eunsoo/Downloads/study_알짜/slambook/practice2/glog/logging.h
+

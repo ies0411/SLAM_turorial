@@ -111,6 +111,58 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named testceres
+
+# Build rule for target.
+testceres: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 testceres
+.PHONY : testceres
+
+# fast build rule for target.
+testceres/fast:
+	$(MAKE) -f CMakeFiles/testceres.dir/build.make CMakeFiles/testceres.dir/build
+.PHONY : testceres/fast
+
+#=============================================================================
+# Target rules for targets named featureTutorial
+
+# Build rule for target.
+featureTutorial: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 featureTutorial
+.PHONY : featureTutorial
+
+# fast build rule for target.
+featureTutorial/fast:
+	$(MAKE) -f CMakeFiles/featureTutorial.dir/build.make CMakeFiles/featureTutorial.dir/build
+.PHONY : featureTutorial/fast
+
+#=============================================================================
+# Target rules for targets named testimage
+
+# Build rule for target.
+testimage: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 testimage
+.PHONY : testimage
+
+# fast build rule for target.
+testimage/fast:
+	$(MAKE) -f CMakeFiles/testimage.dir/build.make CMakeFiles/testimage.dir/build
+.PHONY : testimage/fast
+
+#=============================================================================
+# Target rules for targets named ceresTutorial
+
+# Build rule for target.
+ceresTutorial: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ceresTutorial
+.PHONY : ceresTutorial
+
+# fast build rule for target.
+ceresTutorial/fast:
+	$(MAKE) -f CMakeFiles/ceresTutorial.dir/build.make CMakeFiles/ceresTutorial.dir/build
+.PHONY : ceresTutorial/fast
+
+#=============================================================================
 # Target rules for targets named testSophus
 
 # Build rule for target.
@@ -135,6 +187,60 @@ testEigen: cmake_check_build_system
 testEigen/fast:
 	$(MAKE) -f CMakeFiles/testEigen.dir/build.make CMakeFiles/testEigen.dir/build
 .PHONY : testEigen/fast
+
+ceresTutorial.o: ceresTutorial.cpp.o
+
+.PHONY : ceresTutorial.o
+
+# target to build an object file
+ceresTutorial.cpp.o:
+	$(MAKE) -f CMakeFiles/ceresTutorial.dir/build.make CMakeFiles/ceresTutorial.dir/ceresTutorial.cpp.o
+.PHONY : ceresTutorial.cpp.o
+
+ceresTutorial.i: ceresTutorial.cpp.i
+
+.PHONY : ceresTutorial.i
+
+# target to preprocess a source file
+ceresTutorial.cpp.i:
+	$(MAKE) -f CMakeFiles/ceresTutorial.dir/build.make CMakeFiles/ceresTutorial.dir/ceresTutorial.cpp.i
+.PHONY : ceresTutorial.cpp.i
+
+ceresTutorial.s: ceresTutorial.cpp.s
+
+.PHONY : ceresTutorial.s
+
+# target to generate assembly for a file
+ceresTutorial.cpp.s:
+	$(MAKE) -f CMakeFiles/ceresTutorial.dir/build.make CMakeFiles/ceresTutorial.dir/ceresTutorial.cpp.s
+.PHONY : ceresTutorial.cpp.s
+
+featureTutorial.o: featureTutorial.cpp.o
+
+.PHONY : featureTutorial.o
+
+# target to build an object file
+featureTutorial.cpp.o:
+	$(MAKE) -f CMakeFiles/featureTutorial.dir/build.make CMakeFiles/featureTutorial.dir/featureTutorial.cpp.o
+.PHONY : featureTutorial.cpp.o
+
+featureTutorial.i: featureTutorial.cpp.i
+
+.PHONY : featureTutorial.i
+
+# target to preprocess a source file
+featureTutorial.cpp.i:
+	$(MAKE) -f CMakeFiles/featureTutorial.dir/build.make CMakeFiles/featureTutorial.dir/featureTutorial.cpp.i
+.PHONY : featureTutorial.cpp.i
+
+featureTutorial.s: featureTutorial.cpp.s
+
+.PHONY : featureTutorial.s
+
+# target to generate assembly for a file
+featureTutorial.cpp.s:
+	$(MAKE) -f CMakeFiles/featureTutorial.dir/build.make CMakeFiles/featureTutorial.dir/featureTutorial.cpp.s
+.PHONY : featureTutorial.cpp.s
 
 testEigen.o: testEigen.cpp.o
 
@@ -190,6 +296,60 @@ testSophus.cpp.s:
 	$(MAKE) -f CMakeFiles/testSophus.dir/build.make CMakeFiles/testSophus.dir/testSophus.cpp.s
 .PHONY : testSophus.cpp.s
 
+testceres.o: testceres.cpp.o
+
+.PHONY : testceres.o
+
+# target to build an object file
+testceres.cpp.o:
+	$(MAKE) -f CMakeFiles/testceres.dir/build.make CMakeFiles/testceres.dir/testceres.cpp.o
+.PHONY : testceres.cpp.o
+
+testceres.i: testceres.cpp.i
+
+.PHONY : testceres.i
+
+# target to preprocess a source file
+testceres.cpp.i:
+	$(MAKE) -f CMakeFiles/testceres.dir/build.make CMakeFiles/testceres.dir/testceres.cpp.i
+.PHONY : testceres.cpp.i
+
+testceres.s: testceres.cpp.s
+
+.PHONY : testceres.s
+
+# target to generate assembly for a file
+testceres.cpp.s:
+	$(MAKE) -f CMakeFiles/testceres.dir/build.make CMakeFiles/testceres.dir/testceres.cpp.s
+.PHONY : testceres.cpp.s
+
+testimage.o: testimage.cpp.o
+
+.PHONY : testimage.o
+
+# target to build an object file
+testimage.cpp.o:
+	$(MAKE) -f CMakeFiles/testimage.dir/build.make CMakeFiles/testimage.dir/testimage.cpp.o
+.PHONY : testimage.cpp.o
+
+testimage.i: testimage.cpp.i
+
+.PHONY : testimage.i
+
+# target to preprocess a source file
+testimage.cpp.i:
+	$(MAKE) -f CMakeFiles/testimage.dir/build.make CMakeFiles/testimage.dir/testimage.cpp.i
+.PHONY : testimage.cpp.i
+
+testimage.s: testimage.cpp.s
+
+.PHONY : testimage.s
+
+# target to generate assembly for a file
+testimage.cpp.s:
+	$(MAKE) -f CMakeFiles/testimage.dir/build.make CMakeFiles/testimage.dir/testimage.cpp.s
+.PHONY : testimage.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -198,14 +358,30 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... testceres"
+	@echo "... featureTutorial"
+	@echo "... testimage"
+	@echo "... ceresTutorial"
 	@echo "... testSophus"
 	@echo "... testEigen"
+	@echo "... ceresTutorial.o"
+	@echo "... ceresTutorial.i"
+	@echo "... ceresTutorial.s"
+	@echo "... featureTutorial.o"
+	@echo "... featureTutorial.i"
+	@echo "... featureTutorial.s"
 	@echo "... testEigen.o"
 	@echo "... testEigen.i"
 	@echo "... testEigen.s"
 	@echo "... testSophus.o"
 	@echo "... testSophus.i"
 	@echo "... testSophus.s"
+	@echo "... testceres.o"
+	@echo "... testceres.i"
+	@echo "... testceres.s"
+	@echo "... testimage.o"
+	@echo "... testimage.i"
+	@echo "... testimage.s"
 .PHONY : help
 
 
